@@ -117,6 +117,8 @@
       transition: transform .2s, filter .2s;
     }
     button:hover { transform: translateY(-2px); filter: brightness(1.06); }
+    .direct-login { display: block; margin-top: 14px; color: var(--cyan); text-align: center; font-size: 13px; text-decoration: none; }
+    .direct-login:hover { text-decoration: underline; }
     .notice {
       margin-top: 20px; padding: 13px; border-radius: 11px;
       background: rgba(35, 122, 155, .11); color: #a9c8d5;
@@ -167,6 +169,7 @@
         <input id="email" name="email" type="email" autocomplete="username" placeholder="name@radiologyessence.com" required>
         <button type="submit">Continue to Zoho Mail <span aria-hidden="true">↗</span></button>
       </form>
+      <a class="direct-login" href="https://mail.zoho.in/" rel="noopener">Open Zoho Mail sign in directly</a>
       <div class="notice"><strong>Security note:</strong> Your password is never requested or stored on this portal. Enter your password only on the official Zoho Mail website.</div>
       <div class="provider"><span aria-hidden="true">●</span> Email service powered by <b>Zoho Mail India</b></div>
     </section>
@@ -182,7 +185,7 @@
         emailInput.reportValidity();
         return;
       }
-      window.location.href = "https://mail.zoho.in/";
+      window.location.assign("https://mail.zoho.in/");
     });
   </script>
 </body>
